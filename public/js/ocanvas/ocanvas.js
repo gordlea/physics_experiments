@@ -9,8 +9,15 @@
  * Including Xccessors by Eli Grey
  * Including easing equations by Robert Penner
  */
-
-(function(window, document, undefined){
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(factory);
+    } else {
+        // Browser globals
+        root.KeyboardJS = factory();
+    }
+}(this, function(window, document, undefined){
 
     // Define the oCanvas object
     var oCanvas = {
@@ -5870,7 +5877,7 @@
                 this.active = false;
 
                 return this;
-            },
+            }
 
         }, settings);
     };
@@ -5878,9 +5885,9 @@
     // Register the display object
     oCanvas.registerDisplayObject("sprite", sprite, "init");
 
+    return oCanvas;
 
-
-})(window, document);
+})(window, document));
 /*
  * Xccessors Standard: Cross-browser ECMAScript 5 accessors
  * http://purl.eligrey.com/github/Xccessors
@@ -6008,4 +6015,5 @@
         }
 
     }
+
 }());
