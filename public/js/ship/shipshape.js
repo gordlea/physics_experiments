@@ -1,4 +1,4 @@
-(function(oCanvas, window, document, undefined){
+define(['ocanvas/ocanvas'],function(oCanvas){
 
     // Define the class
     // Define the class
@@ -51,4 +51,5 @@
 
     // Register the display object
     oCanvas.registerDisplayObject("shipshape", shipshape);
-})(oCanvas, window, document);
+
+});

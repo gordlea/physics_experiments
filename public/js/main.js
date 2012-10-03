@@ -1,10 +1,19 @@
-//requirejs.config({
-//    //By default load any module IDs from js/lib
-//    baseUrl: 'js/'
-//});
 
-require(['domReady', 'ocanvas/ocanvas'], function (domReady, oCanvas) {
+require(['domReady', 'ocanvas/ocanvas', 'ship/shipshape'], function (domReady, oCanvas, shipshape) {
     domReady(function () {
         console.log("domReady");
+        var canvas = oCanvas.create({
+            canvas: "#canvas"
+        });
+
+        var rectangle = canvas.display.shipshape({
+            x: 100,
+            y: 100,
+            width: 200,
+            height: 100,
+            fill: "#0aa"
+        });
+
+        canvas.addChild(rectangle);
     });
 });
