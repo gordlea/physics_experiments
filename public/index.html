@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>oCanvas Example</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!--<base href="http://ocanvas.org/">-->
+    <link rel="stylesheet" href="css/example.css">
+</head>
+<body>
+<a href="javascript:history.go(-1);" class="example-back">Back</a>
+<pre id="output"></pre>
+<canvas id="canvas" width="900" height="500"></canvas>
+<script src="js/ocanvas.js"></script>
+<script src="js/shipshape.js"></script>
+<script type="text/javascript" src="/js/vendor/box2d.js"></script>
+<script type="text/javascript" src="/js/keyboard.js"></script>
+<script>
+    var canvas = oCanvas.create({
+        canvas: "#canvas"
+    });
+
+    var rectangle = canvas.display.shipshape({
+        x: 100,
+        y: 100,
+        width: 200,
+        height: 100,
+        fill: "#0aa"
+    });
+
+    canvas.addChild(rectangle);
+</script>
+</body>
+</html>
