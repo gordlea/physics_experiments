@@ -22,10 +22,10 @@ define(['ocanvas/ocanvas'],function(oCanvas){
                     canvas.lineWidth = this.strokeWidth;
                     canvas.strokeStyle = this.strokeColor;
 
-                var scale = 1;
 
-                var length = 173*scale;
-                var beam = 23.8*scale;
+
+                var length = 173*this.scale;
+                var beam = 23.8*this.scale;
 
                 var hl = length/2;
                 var hb = beam/2;

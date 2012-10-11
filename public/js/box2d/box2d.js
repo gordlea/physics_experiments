@@ -31,6 +31,7 @@
 * 3. This notice may not be removed or altered from any source distribution.
 
 */
+define(function(){
 var Box2D = {};
 
 (function (a2j, undefined) {
@@ -10881,3 +10882,6 @@ Box2D.postDefs = [];
 var i;
 for (i = 0; i < Box2D.postDefs.length; ++i) Box2D.postDefs[i]();
 delete Box2D.postDefs;
+
+    return Box2D;
+});
